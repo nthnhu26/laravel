@@ -1,0 +1,209 @@
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 230px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #007BFF;
+    color: white;
+    transition: width 0.3s;
+    z-index: 1000;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+    &::-webkit-scrollbar {
+        display: none; /* Chrome, Safari, Opera */
+    }
+}
+
+.sidebar.collapsed {
+    width: 70px;
+}
+
+.sidebar .sidebar-title {
+    padding: 15px;
+    text-align: center;
+    transition: opacity 0.3s;
+}
+
+.sidebar .sidebar-logo {
+    width: 70px; /* Kích thước 70x70px */
+    height: 70px;
+    border-radius: 50%; /* Hình tròn */
+    object-fit: cover; /* Đảm bảo ảnh không bị méo */
+    border: 2px solid #FFFFFF; /* Viền trắng, độ dày 2px */
+    transition: opacity 0.3s;
+}
+
+.sidebar.collapsed .sidebar-title {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}
+
+.sidebar.collapsed .sidebar-logo {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.sidebar .nav-link {
+    color: white;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar .nav-link i {
+    margin-right: 10px;
+    font-size: 1.5rem;
+}
+
+.sidebar.collapsed .nav-link span {
+    display: none;
+}
+
+.sidebar.collapsed .nav-link i {
+    margin-right: 0;
+}
+
+.sidebar .nav-link:hover {
+    background-color: #aac4df;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-left: 230px;
+    transition: margin-left 0.3s;
+}
+
+.navbar.collapsed {
+    margin-left: 70px;
+}
+
+/* Căn chỉnh text và ảnh trong navbar */
+.navbar .nav-link.dropdown-toggle {
+    display: flex;
+    align-items: center;
+    padding: 8px 15px;
+}
+
+.navbar .nav-link.dropdown-toggle img {
+    margin-left: 8px;
+    /* Khoảng cách giữa text và ảnh */
+}
+
+/* Main wrapper */
+.main-wrapper {
+    margin-left: 230px;
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 56px);
+    width: calc(100% - 230px);
+    transition: margin-left 0.3s, width 0.3s;
+}
+
+.main-wrapper.collapsed {
+    margin-left: 70px;
+    width: calc(100% - 70px);
+}
+
+/* Content */
+.content {
+    padding: 20px;
+    flex: 1;
+    background-color: #F8F9FA;
+    width: 100%;
+}
+
+/* Cards */
+.card {
+    border: 1px solid #E0E0E0;
+    border-radius: 8px;
+    background-color: #FFFFFF;
+}
+
+.card-body {
+    padding: 15px;
+}
+
+.card-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.card-text {
+    font-size: 0.9rem;
+    color: #6C757D;
+}
+
+.btn-primary {
+    background-color: #0D6EFD;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+/* Footer */
+.footer {
+    background-color: #7f8790;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+/* Chatbot Button */
+.chatbot-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    font-size: 1.2rem;
+    z-index: 1000;
+    background-color: #0D6EFD;
+    border: none;
+}
+
+.chatbot-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 70px;
+    }
+
+    .sidebar .nav-link span,
+    .sidebar .sidebar-title {
+        display: none;
+    }
+
+    .sidebar .nav-link i {
+        margin-right: 0;
+    }
+
+    .navbar {
+        margin-left: 70px;
+    }
+
+    .main-wrapper {
+        margin-left: 70px;
+        width: calc(100% - 70px);
+    }
+}

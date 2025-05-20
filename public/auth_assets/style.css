@@ -1,0 +1,124 @@
+body {
+    background-image: url('../assets/images/background.png');
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Nunito', sans-serif;
+}
+
+.auth-container {
+    
+    max-width: 500px;
+    width: 100%;
+    background-color: #F2F4FE;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.btn-google {
+    border: 1px solid #000000;
+    border-radius: 40px;
+}
+
+.btn-google img {
+    width: 30px;
+    height: 30px;
+}
+
+.btn-google:hover {
+    background-color: #8e93aa;
+    color: white;
+}
+
+.form-container {
+    padding: 30px;
+}
+
+.form-control {
+    border-radius: 40px;
+}
+
+.btn-primary {
+    border-radius: 40px;
+    font-size: 16px;
+    padding: 10px 20px;
+    height: 45px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: rgb(0, 0, 0);
+    font-size: 50px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close-btn:hover {
+    color: #ff6b6b;
+}
+
+/* =================================================================
+
+================================================================= */
+.input-group {
+    display: flex;
+    align-items: center;
+    border-radius: 50px;
+    /* Bo tròn toàn bộ viền */
+    border: 1px solid #d1d5db;
+    /* Viền bao quanh */
+    background-color: #fff;
+    /* Nền trắng */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* Shadow cho toàn ô */
+    overflow: hidden;
+    /* Đảm bảo nội dung không tràn ra ngoài */
+    transition: border-color 0.3s;
+    /* Hiệu ứng chuyển đổi viền */
+}
+
+.input-group:hover {
+    border-color: #80bdff;
+    /* Thay đổi màu viền khi hover */
+    box-shadow: inset;
+}
+
+.input-group .form-control {
+    border: none;
+    /* Xóa viền mặc định của input */
+    outline: none;
+    border-radius: 0;
+    /* Đảm bảo không bo góc riêng cho input */
+    flex-grow: 1;
+    /* Giúp input chiếm tối đa không gian */
+    font-size: 16px;
+    /* Kích thước chữ */
+    padding: 10px 20px;
+    /* Padding trong input */
+    box-shadow: none;
+    /* Xóa shadow mặc định */
+}
+
+.input-group .form-control:focus {
+    outline: none;
+
+}
+
+.input-group-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    /* Khoảng cách trong icon */
+    background-color: transparent;
+    /* Nền trong suốt */
+    border: none;
+    /* Xóa viền riêng của icon */
+    cursor: pointer;
+    /* Thêm hiệu ứng con trỏ */
+}

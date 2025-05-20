@@ -1,0 +1,129 @@
+/* public/assets/css/attractions.css */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: #f5f6fa;
+}
+
+.hero-section {
+    position: relative;
+    height: 600px;
+    overflow: hidden;
+    margin-bottom: 2rem;
+}
+
+.hero-slider .owl-carousel .item {
+    position: relative;
+    height: 600px;
+}
+
+.hero-slider .owl-carousel .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.hero-overlay h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.search-bar {
+    background: white;
+    border-radius: 15px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.attraction-card {
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.attraction-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.attraction-card img {
+    height: 250px;
+    object-fit: cover;
+}
+
+.favorite-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5rem;
+    color: white;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    transition: color 0.3s;
+}
+
+.favorite-btn:hover {
+    color: #ff0000;
+}
+
+.amenity-badge {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.detail-slider .owl-carousel .item img {
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.detail-content {
+    background: white;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.booking-form {
+    background: #f8f9fa;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.map-container {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+@media (max-width: 768px) {
+    .hero-section, .hero-slider .owl-carousel .item {
+        height: 400px;
+    }
+    .hero-overlay h1 {
+        font-size: 2rem;
+    }
+    .attraction-card img {
+        height: 200px;
+    }
+    .detail-slider .owl-carousel .item img {
+        height: 300px;
+    }
+}
