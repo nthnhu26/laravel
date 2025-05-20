@@ -44,3 +44,4 @@ composer require geoip2/geoip2
 
 cập nhật file config/app.php
 # laravel
+# laravel
